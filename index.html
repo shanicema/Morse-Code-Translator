@@ -5,19 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morse Code Translator</title>
+    <link rel="stylesheet" a href="./styles.css">
     <script type = "module" src="./script.js" defer></script>
 </head>
 <body>
     <h1 class="title">Translate Morse Code</h1>
     <div class="input">
         <h2 class="input__header">English Text Input</h2>
-        <textarea id="englishInput" class="input__english-input" placeholder="Enter text here"></textarea>
+        <div class="grow-wrap">
+            <textarea id="englishInput" class="input__english-input" placeholder="Enter text here"></textarea>
+        </div>
     </div>
     <div class="output">
         <h2 class="output__header">Morse Code Output</h2>
-        <textarea readonly id="morseOutput" class="output__morse-output" ></textarea>
+        <div class="grow-wrap">
+            <textarea readonly id="morseOutput" class="output__morse-output" ></textarea>
+        </div>
     </div>
     <br>
-    <button id="reverseButton">Reverse</button>
+    <div class="btn">
+        <button id="reverseButton" class="btn__icon">Swap</button>
+        <button id="backButton" class="btn__icon">Refresh</button>
+    </div>
 </body>
 </html>
