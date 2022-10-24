@@ -26,24 +26,24 @@ reverseButton.addEventListener('click', () => {
     update();
 
     // input.classList.toggle();
-    
 });
 
 function update () {
     const isMorseCode = morseCodeRegex.test(input.value);
 
     if (isMorseCode || input.value.length == 0) {
-        outputHeader.innerText = 'English Text Output';
         inputHeader.innerText = 'Morse Code Input';
+        outputHeader.innerText = 'English Text Output';
     } 
     else { 
-        outputHeader.innerText = 'Morse Code Output';
         inputHeader.innerText = 'English Text Input';
+        outputHeader.innerText = 'Morse Code Output';
     }
 
     clearTimeout(timeout);
     timeout = setTimeout(() => {
-        output.value = (isMorseCode ? convertToEnglish : convertToMorse)(input.value);
+        const fnToCall = (isMorseCode ? convertToEnglish : convertToMorse);
+        output.value = fnToCall(input.value);
     }, updateTime)
 }
 

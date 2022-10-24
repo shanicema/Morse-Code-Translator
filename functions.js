@@ -6,7 +6,7 @@ export const convertToMorse = (string) => {
         let stringTransform = string.toUpperCase().split("");
         // console.log(stringTransform);
         // ouput: ['H', 'E', 'Y', ' ', 'T', 'H', 'E', 'R', 'E', '!']
-    
+        console.log ('H');
         return stringTransform.map(el => {
             return englishToMorse[el] ? englishToMorse[el]: el;
         }).join(" ");
@@ -30,4 +30,18 @@ console.log(
     convertToEnglish(".... . -.--   - .... . .-. .")
 )
     
+// let a = ".... . .-.. .-.. ---   - .... . .-. .".split("   ");
+// console.log(a)
+
+// let varB = a.map(word => {
+//     return word.split(" ").map(el => {
+//         return morseToEnglish[el] || el;
+//     }).join('')
+// })
+
+// console.log(varB)
+
+// let varC = varB.join(' ').toLowerCase()
+
+// console.log(varC)
 

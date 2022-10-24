@@ -65,6 +65,7 @@ export const morseToEnglish = Object.fromEntries(Object.entries(englishToMorse).
 
 
 export const morseCodeRegex = /^[\.-\s\n]+$/;
+
 export const updateTime = 500;
 
 
